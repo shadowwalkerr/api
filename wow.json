@@ -23,15 +23,6 @@
 									"var jsonData = JSON.parse(responseBody);",
 									"",
 									"var schema = {",
-									" \"type\": \"array\",",
-									" \"items\": {",
-									"   \"type\": \"object\",",
-									"   \"properties\": {",
-									"      \"id\": { \"type\": \"string\" },",
-									"      \"status\": { \"type\": \"string\", \"enum\": [expectedStatus] }",
-									"   }",
-									" }",
-									"};",
 									"",
 									"tests[\"Valid response\"] = tv4.validate(jsonData, schema);"
 								]
