@@ -8,11 +8,11 @@
 	},
 	"item": [
 		{
-			"name": "api",
-			"description": "Folder for api",
+			"name": "order",
+			"description": "Folder for order",
 			"item": [
 				{
-					"name": "Retrieve a list of apis",
+					"name": "Retrieve a list of orders",
 					"event": [
 						{
 							"listen": "test",
@@ -31,7 +31,7 @@
 					],
 					"request": {
 						"url": {
-							"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/api?ic={{status}}&page={{page}}",
+							"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?ic={{status}}&page={{page}}",
 							"host": [
 								"http:"
 							],
@@ -39,7 +39,7 @@
 							"path": [
 								"",
 								"",
-								"api"
+								"order"
 							],
 							"query": [
 								{
@@ -60,7 +60,7 @@
 						"method": "GET",
 						"header": [],
 						"body": {},
-						"description": "Retrieve a list of apis"
+						"description": "Retrieve a list of orders"
 					},
 					"response": [
 						{
@@ -68,7 +68,7 @@
 							"name": "list-pending_approval",
 							"originalRequest": {
 								"url": {
-									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/api?ic=800911105142&page=0",
+									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?ic=800911105142&page=0",
 									"host": [
 										"http:"
 									],
@@ -76,7 +76,7 @@
 									"path": [
 										"",
 										"",
-										"api"
+										"order"
 									],
 									"query": [
 										{
@@ -112,7 +112,7 @@
 							"name": "list-approved",
 							"originalRequest": {
 								"url": {
-									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/api?ic=800911105141&page=0",
+									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?ic=800911105141&page=0",
 									"host": [
 										"http:"
 									],
@@ -120,7 +120,7 @@
 									"path": [
 										"",
 										"",
-										"api"
+										"order"
 									],
 									"query": [
 										{
