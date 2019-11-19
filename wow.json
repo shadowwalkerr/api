@@ -1,18 +1,18 @@
 {
 	"variables": [],
 	"info": {
-		"name": "Test API",
+		"name": "LIAM REST",
 		"_postman_id": "51a199dc-33a3-348b-3853-e4bbd76e0fdc",
 		"description": "version=1.0 - Description for Test API using Apicurio Studio",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "order",
-			"description": "Folder for order",
+			"name": "api",
+			"description": "Folder for api",
 			"item": [
 				{
-					"name": "Retrieve a list of orders",
+					"name": "Retrieve a list of apis",
 					"event": [
 						{
 							"listen": "test",
@@ -31,7 +31,7 @@
 					],
 					"request": {
 						"url": {
-							"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?ic={{status}}&page={{page}}",
+							"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/api?ic={{status}}&page={{page}}",
 							"host": [
 								"http:"
 							],
@@ -39,7 +39,7 @@
 							"path": [
 								"",
 								"",
-								"order"
+								"api"
 							],
 							"query": [
 								{
@@ -60,7 +60,7 @@
 						"method": "GET",
 						"header": [],
 						"body": {},
-						"description": "Retrieve a list of orders"
+						"description": "Retrieve a list of apis"
 					},
 					"response": [
 						{
@@ -68,7 +68,7 @@
 							"name": "list-pending_approval",
 							"originalRequest": {
 								"url": {
-									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?ic=8080&page=0",
+									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/api?ic=800911105142&page=0",
 									"host": [
 										"http:"
 									],
@@ -76,12 +76,12 @@
 									"path": [
 										"",
 										"",
-										"order"
+										"api"
 									],
 									"query": [
 										{
 											"key": "ic",
-											"value": "7070",
+											"value": "800911105142",
 											"equals": true,
 											"description": ""
 										},
@@ -105,14 +105,14 @@
 							"header": [],
 							"cookie": [],
 							"responseTime": 0,
-							"body": "[\n    \"id\": \"8080\",\n    \"status\": \"False\" \n]"
+							"body": "[\n    \"id\": \"800911105142\",\n    \"status\": \"False\" \n]"
 						},
 						{
 							"id": "c3c6717f-23b0-49a0-9e2a-594940ea2830",
 							"name": "list-approved",
 							"originalRequest": {
 								"url": {
-									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?ic=7070&page=0",
+									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/api?ic=800911105141&page=0",
 									"host": [
 										"http:"
 									],
@@ -120,12 +120,12 @@
 									"path": [
 										"",
 										"",
-										"order"
+										"api"
 									],
 									"query": [
 										{
 											"key": "ic",
-											"value": "7070",
+											"value": "800911105141",
 											"equals": true,
 											"description": ""
 										},
@@ -149,119 +149,11 @@
 							"header": [],
 							"cookie": [],
 							"responseTime": 0,
-							"body": "[\n    {\n        \"id\": \"121314\",\n        \"status\": \"approved\",\n        \"price\": 4,\n        \"quantity\": 2,\n        \"item\": {\n            \"id\": \"2\",\n            \"label\": \"Bar\",\n            \"price\": 2\n        }\n    }\n]"
+							"body": "[\n    \"id\": \"800911105141\",\n    \"status\": \"True\" \n]"
 						}
 					]
 				},
-				{
-					"name": "Create (place) a new order",
-					"request": {
-						"url": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order",
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "The order to create"
-						},
-						"description": "Create (place) a new order"
-					},
-					"response": []
-				},
-				{
-					"name": "Retrieve and existing order using its is",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"var expectedId = globals[\"id\"];",
-									"var jsonData = JSON.parse(responseBody);",
-									"tests[\"Check id value\"] = jsonData.id === expectedId;"
-								]
-							}
-						}
-					],
-					"request": {
-						"url": {
-							"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order/:id",
-							"host": [
-								"http:"
-							],
-							"port": "",
-							"path": [
-								"",
-								"",
-								"order",
-								":id"
-							],
-							"query": [],
-							"variable": [
-								{
-									"description": "",
-									"key": "id",
-									"value": ""
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {},
-						"description": "Retrieve an existing order using its id"
-					},
-					"response": [
-						{
-							"id": "d48162cb-e740-48ed-9acb-16a5395c7b44",
-							"name": "get-123456",
-							"originalRequest": {
-								"url": {
-									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order/:id",
-									"host": [
-										"http:"
-									],
-									"port": "",
-									"path": [
-										"",
-										"",
-										"order",
-										":id"
-									],
-									"query": [],
-									"variable": [
-										{
-											"description": "",
-											"key": "id",
-											"value": "123456"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"body": {}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "parsed",
-							"header": [],
-							"cookie": [],
-							"responseTime": 0,
-							"body": "[\n    \"id\": \"8080\",\n    \"status\": \"False\" \n]"
-						}
-						
-					]
-				},
-				{
-					"name": "Delete an existing order using its id",
-					"request": {
-						"url": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order/:id",
-						"method": "DELETE",
-						"header": [],
-						"body": {},
-						"description": "Delete an existing order using its id"
-					},
-					"response": []
-				}
+				
 			]
 		}
 	]
