@@ -1,18 +1,18 @@
 {
 	"variables": [],
 	"info": {
-		"name": "Test API",
+		"name": "LIAM REST",
 		"_postman_id": "51a199dc-33a3-348b-3853-e4bbd76e0fdc",
 		"description": "version=1.0 - Description for Test API using Apicurio Studio",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "order",
-			"description": "Folder for order",
+			"name": "api",
+			"description": "Folder for api",
 			"item": [
 				{
-					"name": "Retrieve a list of orders",
+					"name": "Retrieve a list of apis",
 					"event": [
 						{
 							"listen": "test",
@@ -31,7 +31,7 @@
 					],
 					"request": {
 						"url": {
-							"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?ic={{status}}&page={{page}}",
+							"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/api?ic={{status}}&page={{page}}",
 							"host": [
 								"http:"
 							],
@@ -60,15 +60,15 @@
 						"method": "GET",
 						"header": [],
 						"body": {},
-						"description": "Retrieve a list of orders"
+						"description": "Retrieve a list of apis"
 					},
 					"response": [
 						{
 							"id": "5f88eccb-f2fb-43e9-aa74-23a7247fe1a2",
-							"name": "list-pending_approval",
+							"name": "False",
 							"originalRequest": {
 								"url": {
-									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?ic=800911105142&page=0",
+									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/api?ic=800911105142&page=0",
 									"host": [
 										"http:"
 									],
@@ -76,7 +76,7 @@
 									"path": [
 										"",
 										"",
-										"order"
+										"api"
 									],
 									"query": [
 										{
@@ -109,10 +109,10 @@
 						},
 						{
 							"id": "c3c6717f-23b0-49a0-9e2a-594940ea2830",
-							"name": "list-approved",
+							"name": "True",
 							"originalRequest": {
 								"url": {
-									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?ic=800911105141&page=0",
+									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/api?ic=800911105141&page=0",
 									"host": [
 										"http:"
 									],
@@ -120,7 +120,7 @@
 									"path": [
 										"",
 										"",
-										"order"
+										"api"
 									],
 									"query": [
 										{
