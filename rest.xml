@@ -7,22 +7,22 @@ Get a new greeting message</con:description><con:settings/><con:parameters><con:
 def queryString = mockRequest.getRequest().getQueryString()
 log.info "QueryString: " + queryString
 
-if( queryString.contains("80334344333") )
+if( queryString.contains("David") )
 {
     // return the name of the response you want to dispatch
     return "David Response"
 }
-else if( queryString.contains("80334344334") )
+else if( queryString.contains("Gavin") )
 {
     // return the name of the response you want to dispatch
     return "Gavin Response"
 }
 else return "Unknown Response"</con:dispatchPath><con:response name="David Response" id="c6f2e949-26eb-4ed7-959e-f1ff59526bf8" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
-	'name':'80334344333',
-	'greeting':'True !'
+	'name':'David',
+	'greeting':'Hello David !'
 }
 </con:responseContent></con:response><con:response name="Gavin Response" id="ec02e3bf-05a4-4ed3-9c5a-73508c34bfbb" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
-	'name':'80334344334',
-	'greeting':'False !'
+	'name':'Gavin',
+	'greeting':'Hello Gavin !'
 }
 </con:responseContent></con:response><con:response name="Unknwon Response" id="fa7d6da7-e95c-43ff-a120-2961bdf463ea" httpResponseStatus="405" mediaType="application/json"><con:settings/><con:responseContent/></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
