@@ -255,46 +255,9 @@
 							"header": [],
 							"cookie": [],
 							"responseTime": 0,
-							"body": "{\n    \"id\": \"8080\",\n    \"status\": \"False\"}"
-						},
-						{
-							"id": "fdd4db8e-91af-4405-acd4-790ecc0b607e",
-							"name": "get-7891011",
-							"originalRequest": {
-								"url": {
-									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order/:id",
-									"host": [
-										"http:"
-									],
-									"port": "",
-									"path": [
-										"",
-										"",
-										"order",
-										":id"
-									],
-									"query": [],
-									"variable": [
-										{
-											"description": "",
-											"key": "id",
-											"value": "7891011"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"body": {}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "parsed",
-							"header": [],
-							"cookie": [],
-							"responseTime": 0,
-							"body": "{\n    \"id\": 7891011,\n    \"status\": \"pending_approval\",\n    \"devise\": \"EUR\",\n    \"amount\": 20,\n    \"items\": [\n        {\n            \"price\": 20,\n            \"quantity\": 10,\n            \"item\": {\n                \"id\": \"2\",\n                \"label\": \"Bar\",\n                \"price\": 2\n            }\n        }\n    ]\n}"
+							"body": "{\n    \"id\": \"8080\",\n    \"status\": \"False\" \n}"
 						}
+						
 					]
 				},
 				{
