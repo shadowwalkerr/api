@@ -19,7 +19,7 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"var expectedStatus = globals[\"status\"];",
+									"var expectedStatus = globals[\"ic\"];",
 									"var jsonData = JSON.parse(responseBody);",
 									"",
 									"var schema = {",
@@ -31,7 +31,7 @@
 					],
 					"request": {
 						"url": {
-							"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?status={{status}}&page={{page}}",
+							"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?ic={{status}}&page={{page}}",
 							"host": [
 								"http:"
 							],
@@ -43,7 +43,7 @@
 							],
 							"query": [
 								{
-									"key": "status",
+									"key": "ic",
 									"value": "{{status}}",
 									"equals": true,
 									"description": ""
@@ -68,7 +68,7 @@
 							"name": "list-pending_approval",
 							"originalRequest": {
 								"url": {
-									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?status=pending_approval&page=0",
+									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?ic=8080&page=0",
 									"host": [
 										"http:"
 									],
@@ -80,8 +80,8 @@
 									],
 									"query": [
 										{
-											"key": "status",
-											"value": "pending_approval",
+											"key": "ic",
+											"value": "7070",
 											"equals": true,
 											"description": ""
 										},
@@ -112,7 +112,7 @@
 							"name": "list-approved",
 							"originalRequest": {
 								"url": {
-									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?status=approved&page=0",
+									"raw": "http://microcks-microcks.apps.gbsn.demo9936.rht-labs.xyz/order?ic=7070&page=0",
 									"host": [
 										"http:"
 									],
@@ -124,8 +124,8 @@
 									],
 									"query": [
 										{
-											"key": "status",
-											"value": "approved",
+											"key": "ic",
+											"value": "7070",
 											"equals": true,
 											"description": ""
 										},
