@@ -1,0 +1,126 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "New API",
+        "description": "A brand new API with no content.  Go nuts!",
+        "version": "1.0"
+    },
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/nICS": {
+            "get": {
+                "summary": "List All NICS",
+                "description": "Gets a list of all `NIC` entities.",
+                "operationId": "getNICS",
+                "responses": {
+                    "200": {
+                        "description": "Successful response - returns an array of `NIC` entities.",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/NIC"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a NIC",
+                "description": "Creates a new instance of a `NIC`.",
+                "operationId": "createNIC",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "A new `NIC` to be created.",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/NIC"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Successful response."
+                    }
+                }
+            }
+        },
+        "/nICS/{nICId}": {
+            "get": {
+                "summary": "Get a NIC",
+                "description": "Gets the details of a single instance of a `NIC`.",
+                "operationId": "getNIC",
+                "responses": {
+                    "200": {
+                        "description": "Successful response - returns a single `NIC`.",
+                        "schema": {
+                            "$ref": "#/definitions/NIC"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update a NIC",
+                "description": "Updates an existing `NIC`.",
+                "operationId": "updateNIC",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Updated `NIC` information.",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/NIC"
+                        }
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Successful response."
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a NIC",
+                "description": "Deletes an existing `NIC`.",
+                "operationId": "deleteNIC",
+                "responses": {
+                    "204": {
+                        "description": "Successful response."
+                    }
+                }
+            },
+            "parameters": [
+                {
+                    "name": "nICId",
+                    "in": "path",
+                    "description": "A unique identifier for a `NIC`.",
+                    "required": true,
+                    "type": "string"
+                }
+            ]
+        }
+    },
+    "definitions": {
+        "NIC": {
+            "title": "Root Type for NIC",
+            "description": "The root of the NIC type's schema.",
+            "type": "object",
+            "properties": {
+                "IC": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            },
+            "example": "{\n    \"IC\": \"800\",\n    \"status\": \"True\"\n    \n    \n}"
+        }
+    }
+}
